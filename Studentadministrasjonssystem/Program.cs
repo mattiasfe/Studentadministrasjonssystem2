@@ -1,18 +1,51 @@
 ﻿using Studentadministrasjonssystem;
+List<Student> studentListe = 
+[
+    new ("Herman", 22, 3344, "Medisin"),
+    new ("Ola", 24, 3364, "IT")
+];
 
-Student student = new Student("ola", 55, 2277, "IT");
-Fag fag = new Fag(23, "Python",  222);
-skrivUtInfo();
-void skrivUtInfo()
+foreach (var student in studentListe)
 {
-student.GetName("Ola");
-student.GetAge(25);
-student.GetStudentId(666);
-student.GetStudeieProgram("IT");
-fag.GetFagkode(23);
-fag.GetAntallStudiepoeng(222);
-fag.GetFagnavn("Python");
-
+    student.SkrivUtInfo();
 }
 
 
+
+// Herman herman = new Herman("Herman", 55, 2277, "IT", 5, 20, "Python", 222);
+// Ola ola = new Ola("Ola", 27, 2278, "Medisin", 5, "NevroKirugi", 222, 23);
+//
+//
+// List<Herman> hermanListe = [herman];
+// List<Ola> olaListe = [ola];
+// SkrivUtInfo();
+//
+// void SkrivUtInfo()
+// {
+//     Console.WriteLine("Velg informasjon du vil ha");
+//     Console.WriteLine("Ola, Herman");
+//
+//     
+//     string input = Console.ReadLine();
+//
+//     switch (input)
+//     {
+//         case "Ola":
+//             break;        
+//         case "Herman":
+//             break;
+//         default:
+//             Console.WriteLine("Noe gikk galt");
+//             break;
+//   
+//     }
+//             if (input == "Herman")
+//             {
+//                 Console.WriteLine());
+//             }
+//             else
+//             {
+//                 Console.WriteLine(olaListe.ToArray());
+//             }
+//    
+// }

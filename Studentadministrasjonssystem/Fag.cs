@@ -2,29 +2,23 @@
 
 public class Fag
 {
-    private int fagkode;
-    private string fagnavn;
-    private int antallStudiepoeng;
+     private string _fagNavn;
+     private int _fagKode;
+     private int _antallStudiepoeng;
 
-    public Fag(int fagkode, string fagnavn, int antallStudiepoeng)
-    {
-        this.fagkode = fagkode;
-        this.fagnavn = fagnavn;
-        this.antallStudiepoeng = antallStudiepoeng;
-    }
-    
-    public void GetFagkode(int fagkode)
-    {
-        Console.WriteLine($"Fagkode: {fagkode}");
-    }
-    public void GetFagnavn(string fagnavn)
-    {
-        var karakterer = new Karakterer(6);
-        Console.WriteLine($"Fagnavn: {fagnavn}");
-        Console.WriteLine($"karakter: {karakterer}");
-    }
-    public void GetAntallStudiepoeng(int antallStudiepoeng)
-    {
-        Console.WriteLine($"AntallStudiepoeng: {antallStudiepoeng}");
-    }
+     public Fag(string fagNavn, int fagKode, int antallStudiepoeng)
+     {
+          _fagNavn = fagNavn;
+          _fagKode = fagKode;
+          _antallStudiepoeng = antallStudiepoeng;
+     }
+
+     public void skrivUtInfo()
+     {
+          Console.WriteLine($"""
+                            Faget:{_fagNavn},
+                            FagKode:{_fagKode}
+                            Studiepoeng: {_antallStudiepoeng}
+                            """);
+     }
 }

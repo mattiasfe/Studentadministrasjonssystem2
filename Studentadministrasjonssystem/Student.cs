@@ -2,37 +2,37 @@
 
 public class Student
 {
-    private string name;
-    private int age;
-    private int studentId;
-    string studieProgram;
+    string _name;
+    int _age;
+    int _studentId;
+    string _studieProgram;
+
+    private List<Fag> fagListe =
+    [
+        new("IT", 20, 222)
+    ];
 
     public Student(string name, int age, int studentId, string studieProgram)
     {
-        this.name = name;
-        this.age = age;
-        this.studentId = studentId;
-        this.studieProgram = studieProgram;
-    }
-    
-    public void GetName(string name)
-    {
-        Console.WriteLine($"Navn: {name}");
-    }
-    public void GetAge(int age)
-    {
-        Console.WriteLine($"Alder: {age}");;
-    }
-    public void GetStudentId(int studentId)
-    {
-        Console.WriteLine($"Id: {studentId}");
+        _name = name;
+        _age = age;
+        _studentId = studentId;
+        _studieProgram = studieProgram;
     }
 
-    public void GetStudeieProgram(string studieProgram)
+    public void SkrivUtInfo()
     {
-        Console.WriteLine($"StudieProgram: {studieProgram}");
+        Console.WriteLine($"""
+                           Navn: {_name},
+                           Alder: {_age},
+                           Id: {_studentId},
+                           StudieProgram: {_studieProgram},
+                           Fag oversikt:
+                           """);
+        foreach (var fag in fagListe)
+        {
+            fag.skrivUtInfo();
+        }
     }
 }
-
-
 
